@@ -16,7 +16,6 @@ int main(void)
 	{
 		for (j = i; j < 10; j++)
 		{
-			putchar(i);
 			putchar(j);
 			if (i != 9 || j != 9)
 			{
