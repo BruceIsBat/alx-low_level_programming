@@ -7,16 +7,16 @@
  */
 int main(void)
 {
-	char hex[16] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
 	int i;
 
-	for (i = 0; i < 16; i++)
+	for (i = 48; i < 57; i++)
 	{
-		putchar(hex[i]);
-		if (i == 15)
-		{
-			putchar('\n');
-		}
+		putchar(i);
 	}
+	for (i = 67; i < 102; i++)
+	{
+		putchar(i);
+	}
+	putchar('\n');
 	return (0);
 }
