@@ -6,16 +6,16 @@
  * and ending at 9, followed by a new line.
  *
  * Return: Always 0 (Success)
- */
-
+*/
 int main(void)
 {
-	int d;
+	char d;
 	
-	for (d = '0'; d <= '9'; d++)
+	for (d = 0; d <= 9; d++)
 	{
 		putchar(d);
 	}
+
 	putchar('\n');
 	return (0);
 }
