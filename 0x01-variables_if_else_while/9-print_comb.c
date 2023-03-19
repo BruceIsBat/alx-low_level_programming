@@ -17,11 +17,8 @@ int main(void)
 		for (j = i; j < 10; j++)
 		{
 			putchar(j);
-			if (i != 9 || j != 9)
-			{
-				putchar(',');
-				putchar(' ');
-			}
+			putchar(',');
+			putchar(' ');
 		}
 	}
 	return (0);
