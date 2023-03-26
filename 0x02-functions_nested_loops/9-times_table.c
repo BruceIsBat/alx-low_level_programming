@@ -7,6 +7,10 @@
  */
 void times_table(void)
 {
-	times_table(9);
-	return (0);
+	int i;
+
+	for (i = 0; i <= 10; i++)
+	{
+		printf("9 x %d = %d\n", i, i*9);
+	}
 }
