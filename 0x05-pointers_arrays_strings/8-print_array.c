@@ -3,7 +3,8 @@
 
 /**
  * print_array - check the code for
- * 
+ * @a:- input a
+ * @n:- input n
  * Return: Always 0.
  */
 void print_array(int *a, int n)
