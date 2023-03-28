@@ -4,7 +4,7 @@
 /**
  * _atoi - check the code
  * @s: input parameter
- * Return: Always 0.
+ * Return: Always 0
  */
 int _atoi(char *s)
 {
