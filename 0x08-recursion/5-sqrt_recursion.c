@@ -1,14 +1,15 @@
 #include "main.h"
+
 /**
- * _sqrt_recursion - square root
+ * _sqrt_recursion - natural square root
  *
  * @n: parameter
- * Return: 0
+ *
+ * Return: anything
  */
+
 int _sqrt_recursion(int n)
 {
-	int sq_root;
-
 	if (n < 0)
 	{
 		return (-1);
@@ -19,14 +20,39 @@ int _sqrt_recursion(int n)
 	}
 	else
 	{
-		sq_root = _sqrt_recursion(n / 2);
-		if (sq_root == -1 || sq_root * sq_root > n)
-		{
-			return (_sqrt_recursion / n - 2);
-		}
-		else
-		{
-			return (sq_root);
-		}
+		return (_sqrt_helper(n, 1, n));
+	}
+}
+
+
+/**
+ * _sqrt_helper - Calculates the natural
+ *
+ * @n: The input number
+ * @low: The lower limit
+ * @high: The upper limit
+ *
+ * Return: 0
+ */
+int _sqrt_helper(int n, int low, int high)
+{
+	int mid;
+
+	if (high < low)
+	{
+		return (-1);
+	}
+	mid = (low + high) / 2;
+	if (mid * mid == n)
+	{
+		return (mid);
+	}
+	else if (mid * mid < n)
+	{
+		return (_sqrt_helper(n, mid + 1, high));
+	}
+	else
+	{
+		return (_sqrt_helper(n, low, mid - 1));
 	}
 }
