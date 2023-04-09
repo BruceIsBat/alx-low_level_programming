@@ -14,9 +14,10 @@ int main(int argc, char **argv)
 	int y;
 	char *d = "Error";
 
-	if (argc == 0 || argc == 1)
+	if (argc <= 1)
 	{
 		printf("%s\n", d);
+		return (0);
 	}
 	else
 	{
