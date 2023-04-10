@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 /**
  * main - prototype
  *
@@ -11,17 +12,15 @@
 int main(int argc, char **argv)
 {
 	int i, x = 0;
-	char s;
 
 	for (i = 1; i < argc; i++)
 	{
-		for (s = 'a'; s <= 'z'; s++)
-			if (*argv[i] == s)
-			{
-				printf("Error\n");
-				return (1);
-			}
-		if (argc == 0)
+		if (!isdigit(*argv[i]))
+		{
+			printf("Error\n");
+			return (1);
+		}
+		else if (argv[0])
 		{
 			printf("0\n");
 		}
