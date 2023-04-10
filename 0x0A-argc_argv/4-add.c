@@ -21,7 +21,14 @@ int main(int argc, char **argv)
 				printf("Error\n");
 				return (1);
 			}
-		x = x + atoi(argv[i]);
+		if ( argc == 0)
+		{
+			printf("0\n");
+		}
+		else
+		{
+			x = x + atoi(argv[i]);
+		}
 	}
 	printf("%d\n", x);
 	exit(EXIT_SUCCESS);
