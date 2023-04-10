@@ -15,7 +15,11 @@ int main(int argc, char **argv)
 
 	for (i = 1; i < argc; i++)
 	{
-		if (!isdigit(*argv[i]))
+		if (atoi(argv[i]) < 0)
+		{
+			continue;
+		}
+		else if (!isdigit(*argv[i]))
 		{
 			printf("Error\n");
 			return (1);
