@@ -26,12 +26,13 @@ int main(int argc, char **argv)
 		printf("0\n");
 		return (1);
 	}
+
 	for (x = 0; m > 0 && x < sizeof(cents) / sizeof(cents[0]); x++)
 	{
-			y += m / cents[x];
-			m %= cents[x];
+		y += m / cents[x];
+		m %= cents[x];
 	}
 	printf("%d\n", y);
 
-	return(0);
+	return (0);
 }
