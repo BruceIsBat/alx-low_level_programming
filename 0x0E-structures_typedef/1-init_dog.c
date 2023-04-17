@@ -1,7 +1,5 @@
 #include "dog.h"
 #include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 /**
  * init_dog - initializes a struct dog variable
  *
@@ -14,14 +12,7 @@
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	if (d == NULL)
-		return;
-
-	if (name != NULL)
-		d->name = strdup(name);
-
+	d->name = name;
 	d->age = age;
-
-	if (owner != NULL)
-		d->name = strdup(owner);
+	d->owner = owner;
 }
