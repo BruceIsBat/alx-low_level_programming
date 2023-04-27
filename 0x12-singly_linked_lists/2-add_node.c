@@ -1,6 +1,7 @@
 #include "lists.h"
 #include <stddef.h>
-#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 /**
  * add_node - Adds a new node at the beginning of a list_t list.
  * @head: pointer to the pointer of the head of the list.
