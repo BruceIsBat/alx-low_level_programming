@@ -2,6 +2,7 @@
 #define MAIN_H
 
 int sqrt_helper(int n, int i);
+int is_prime_helper(int n, int i);
 int _sqrt_helper(int n, int low, int high);
 void _puts_recursion(char *s);
 void _print_rev_recursion(char *s);

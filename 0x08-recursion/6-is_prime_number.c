@@ -16,6 +16,7 @@ int is_prime_number(int n)
 	return (is_prime_helper(n, 2));
 }
 
+
 /**
  * is_prime_helper - Recursive helper function for is_prime_number
  * @n: The number to check
