@@ -9,17 +9,19 @@
 int is_prime_number(int n)
 {
 	int i;
-	/* Handle base cases */
+
 	if (n <= 1)
+	{
 		return (0);
-	if (n <= 3)
+	}
+	else if (n <= 3)
+	{
 		return (1);
-
-	/* Check if n is divisible by 2 or 3 */
-	if (n % 2 == 0 || n % 3 == 0)
+	}
+	else if (n % 2 == 0 || n % 3 == 0)
+	{
 		return (0);
-
-	/* Check if n is divisible by any number from 5 to sqrt(n) */
+	}
 
 	i = 5;
 	while (i * i <= n)
