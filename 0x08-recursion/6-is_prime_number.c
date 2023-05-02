@@ -8,6 +8,7 @@
  */
 int is_prime_number(int n)
 {
+	int i;
 	/* Handle base cases */
 	if (n <= 1)
 		return (0);
@@ -20,10 +21,12 @@ int is_prime_number(int n)
 
 	/* Check if n is divisible by any number from 5 to sqrt(n) */
 
-	for (int i = 5; i * i <= n; i += 6)
+	i = 5;
+	while (i * i <= n)
 	{
 		if (n % i == 0 || n % (i + 2) == 0)
 			return (0);
+		i += 6;
 	}
 
 	return (1);
