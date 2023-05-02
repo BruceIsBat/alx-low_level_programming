@@ -17,7 +17,23 @@ int is_palindrome(char *s)
 	if (*s != *(s + len - 1))
 		return (0);
 
-	*(s + len - 1) = '\0';
+	return (is_palindrome_helper(s + 1, len - 2));
+}
 
-	return (is_palindrome(s + 1));
+/**
+ * is_palindrome_helper - Recursive helper function for is_palindrome
+ * @s: The string to check
+ * @len: The length of the string, excluding the first and last characters
+ *
+ * Return: 1 if @s is a palindrome, otherwise 0
+ */
+int is_palindrome_helper(char *s, int len)
+{
+	if (len <= 1)
+		return (1);
+
+	if (*s != *(s + len - 1))
+		return (0);
+
+	return (is_palindrome_helper(s + 1, len - 2));
 }
