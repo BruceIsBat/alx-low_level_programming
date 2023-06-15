@@ -11,6 +11,7 @@ char **strtow(char *str)
 {
 	int num_words = 0, i = 0, word_index = 0, word_start = 0, word_length = 0;
 	char **words;
+	int j;
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
@@ -47,6 +48,6 @@ char **strtow(char *str)
 		words[word_index][word_length] = '\0';
 		word_index++;
 	}
-	words[num_index] = NULL;
+	words[word_index] = NULL;
 	return (words);
 }
