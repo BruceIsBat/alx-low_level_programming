@@ -1,6 +1,9 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+int count_words(char *str);
+char **allocate_words(int num_words);
+int split_string(char *str, char **words);
 char *create_array(unsigned int size, char c);
 char *_strdup(char *str);
 char *str_concat(char *s1, char *s2);

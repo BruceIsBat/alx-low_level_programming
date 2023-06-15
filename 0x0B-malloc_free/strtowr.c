@@ -20,7 +20,7 @@ int count_words(char *str)
 			i++;
 	}
 
-	return (num_words);
+	return num_words;
 }
 
 /**
@@ -32,10 +32,9 @@ int count_words(char *str)
 char **allocate_words(int num_words)
 {
 	char **words = (char **)malloc((num_words + 1) * sizeof(char *));
-
 	if (words == NULL)
-		return (NULL);
-	return (words);
+		return NULL;
+	return words;
 }
 
 /**
@@ -47,7 +46,7 @@ char **allocate_words(int num_words)
  */
 int split_string(char *str, char **words)
 {
-	int j, i = 0, word_index = 0, word_start = 0, word_length = 0;
+	int i = 0, word_index = 0, word_start = 0, word_length = 0;
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
@@ -60,16 +59,16 @@ int split_string(char *str, char **words)
 		words[word_index] = (char *)malloc((word_length + 1) * sizeof(char));
 		if (words[word_index] == NULL)
 		{
-			for (j = 0; j < word_index; j++)
+			for (int j = 0; j < word_index; j++)
 				free(words[j]);
-			return (-1);
+			return -1;
 		}
 		strncpy(words[word_index], str + word_start, word_length);
 		words[word_index][word_length] = '\0';
 		word_index++;
 	}
 	words[word_index] = NULL;
-	return (0);
+	return 0;
 }
 
 /**
@@ -84,19 +83,20 @@ char **strtow(char *str)
 	char **words;
 
 	if (str == NULL || *str == '\0')
-		return (NULL);
+		return NULL;
 
 	num_words = count_words(str);
 
 	words = allocate_words(num_words);
 	if (words == NULL)
-		return (NULL);
+		return NULL;
 
 	if (split_string(str, words) == -1)
 	{
 		free(words);
-		return (NULL);
+		return NULL;
 	}
 
-	return (words);
+	return words;
 }
+
