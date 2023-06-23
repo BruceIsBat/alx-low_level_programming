@@ -9,28 +9,28 @@
  */
 int calculate(int num1, char op, int num2)
 {
-    int result;
+	int result;
 
-    switch (op)
-    {
-        case '+':
-            result = num1 + num2;
-            break;
-        case '-':
-            result = num1 - num2;
-            break;
-        case '*':
-            result = num1 * num2;
-            break;
-        case '/':
-            result = num1 / num2;
-            break;
-        case '%':
-            result = num1 % num2;
-            break;
-        default:
-            result = 0;
-    }
+	switch (op)
+	{
+		case '+':
+			result = num1 + num2;
+			break;
+		case '-':
+			result = num1 - num2;
+			break;
+		case '*':
+			result = num1 * num2;
+			break;
+		case '/':
+			result = num1 / num2;
+			break;
+		case '%':
+			result = num1 % num2;
+			break;
+		default:
+			result = 0;
+	}
 
-    return (result);
+	return (result);
 }
