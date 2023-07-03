@@ -15,11 +15,11 @@ size_t print_list(const list_t *h)
 	{
 		if (h->str == NULL)
 		{
-			printf("[0] (nil)\n", count);
+			printf("[%lu] (nil)\n", count);
 		}
 		else
 		{
-			printf("[%u] %s\n", h->len, h->str);
+			printf("[%lu] %s\n", count, h->str);
 		}
 
 		count++;
