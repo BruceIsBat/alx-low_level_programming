@@ -13,12 +13,9 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int decimal = 0;
 	unsigned int bit;
 
-	if (b == NULL)
-		return (0);
-
 	for (bit = 0; b[bit] != '\0'; bit++)
 	{
-		if (b[bit] != '0' && b[bit] != '1')
+		if ((b[bit] != '0' && b[bit] != '1') | b == NULL)
 			return (0);
 
 		decimal = (decimal << 1) | (b[bit] - '0');
