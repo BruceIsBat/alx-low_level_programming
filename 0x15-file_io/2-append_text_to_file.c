@@ -1,6 +1,10 @@
 #include "main.h"
 #include <stdlib.h>
 #include <string.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <sys/stat.h>
+#include <sys/types.h>
 /**
  * append_text_to_file - append a file
  * @filename: name of file to append to
@@ -13,10 +17,11 @@ int append_text_to_file(const char *filename, char *text_content)
 	int fc;
 	size_t text_len;
 	ssize_t bytes_w;
+	struct stat st;
 
 	if (filename == NULL)
 		return (-1);
-	struct stat st;
+
 	if (stat(filename, &st) == -1)
 		return (-1);
 
