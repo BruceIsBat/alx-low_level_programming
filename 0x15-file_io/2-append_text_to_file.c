@@ -20,11 +20,12 @@ int append_text_to_file(const char *filename, char *text_content)
 	if (fc == -1)
 		return (-1);
 	text_len = strlen(text_content);
-	bytes_w = write(fd, text_content, text_len);
+	bytes_w = write(fc, text_content, text_len);
 	if (bytes_w == -1)
+	{
 		close(fc);
 		return (-1);
-
+	}
 	close(fc);
 
 	return (-1);
