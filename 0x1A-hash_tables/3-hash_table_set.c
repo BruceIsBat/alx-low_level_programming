@@ -73,7 +73,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		current = current->next;
 	}
 
-	/* Key doesn't exist, create a new node and add it at the beginning of the list */
+	/* Key doesn't exist, create a new node and add it at the beginning */
 	new_node = create_hash_node(key, value);
 	if (new_node == NULL)
 		return (0);
