@@ -4,14 +4,13 @@ OBJ= school.o main.o
 NAME= school
 RM= rm
 all: $(NAME)
-$(NAME): $(SRC)
+$(NAME): $(OBJ)
 	$(CC) -o $(NAME) $(OBJ)
 clean:
-	$(RM) $(NAME) *~
+	$(RM) $(NAME) *~ \#*\#
 oclean:
 	$(RM) $(OBJ)
 fclean:
-	$(RM) $(NAME) *~
-	$(RM) $(OBJ)
+	clean ocean
 re:
 	oclean all
